@@ -1,22 +1,39 @@
 <html>
-    <head>
-        <title>Message API</title>
-        <script src="https://code.jquery.com/jquery-1.12.3.min.js"integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="crossorigin="anonymous"></script>
-        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
-        <script src="/assets/msg.js"></script>
 
-    </head>
-    <body>
-        <div id="msg-table">
-            <form>
-                <input type="text" name="msgItem" placeholder="add message" required />
-                <button type="submit">Add message</button>
-            </form>
-            <ul>
-                <% for(var i =0; i <  msgs.length; i++){ %>
-                    <li><%= msgs[i].msgItem %></li>
+<head>
+    <title>Message API</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
+        crossorigin="anonymous"></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/msg.js"></script>
+
+</head>
+
+<body>
+    <div id="msg-table">
+        <form id='addMessage'>
+            <input type="text" name="msgItem" placeholder="add message" required />
+            <button type="submit">Add message</button>
+        </form>
+        <ul>
+            <% for(var i =0; i <  msgs.length; i++){ %>
+                <li>id:
+                    <%= msgs[i]._id %>
+                </li>
                 <% } %>
-            </ul>
+        </ul>
+        <div id="findMessage">
+            <input type="text" id="retrieveItem" name="retrieveItem" placeholder="enter message id " required />
+            <button type="submit">Find Message</button>
+            <div id='results'>
+
+            </div>
         </div>
-    </body>
+
+
+
+
+        </form>
+</body>
+
 </html>

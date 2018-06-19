@@ -1,4 +1,4 @@
-var express= require('express');
+var express = require('express');
 var msgController = require('./controllers/msgController');
 
 var app = express();
@@ -12,5 +12,5 @@ app.use(express.static('./public'));
 //fire controller
 msgController(app);
 //listen to port
-app.listen(3000);
-console.log('listening to port 3000');
+app.listen(8000);
+console.log('listening to port 8000');
