@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('form').on('submit', function(){
 
       var item = $('form input');
-      var msg = {item: item.val()};
+      var msg = {msgItem: item.val()};
 
       $.ajax({
         type: 'POST',
